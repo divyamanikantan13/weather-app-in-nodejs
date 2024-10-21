@@ -2,7 +2,8 @@ module.exports = {
     apps: [
       {
         name: "weather-app",
-        script: "app.js",
+        // script: "app.js",
+        script:"bin/www",
         // instances: 2,
         instances: 3,
         autorestart: true,
