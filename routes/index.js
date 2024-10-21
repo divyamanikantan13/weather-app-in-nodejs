@@ -3,7 +3,7 @@ var router = express.Router();
 
 
 let url    = 'http://api.openweathermap.org/data/2.5/weather?q='
-let appId  = 'appid=YOUR API KEY';
+let appId  = 'appid=8448be00a7d65d2f4c1a796573e1b546';
 let units  = '&units=metric'; 
 var request = require('request');
 
@@ -26,7 +26,7 @@ router.post('/weather', function(req, res, next){
         throw error;
       }
 
-    let country = (body.sys.country) ? body.sys.country : '' ;
+    let country = (body.sys.country) ? body.sys.country : 'India' ;
     let forecast = "For city "+city+', country '+country;
 
     res.render('index', {body : body, forecast: forecast});
